@@ -1,4 +1,4 @@
 #!/usr/bin/python
 
 def go(object):
-    pass
+    print("123")

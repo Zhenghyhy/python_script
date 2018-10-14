@@ -9,13 +9,14 @@ import re
 
 
 def replace_str(input_file, str1, str2, output_file):
-    f = open(input_file, "r")    #//´òļþ£¬ֻ¶Á    f2 = open(output_file, "w+")  #//´òļþ£¬²»´æ£¬Ô´´½¨
+    f = open(input_file, "r")    #//打开文件，只读
+    f2 = open(output_file, "w+")  #//打开文件，不存在，则创建
     line = f.readline()
 
     while line:
         line = f.readline()
-        f2.write(line.replace(str1, str2)) #//дÈf2£¬str1Ì»»Ϊstr2
-    print("Ì»»Í³É)
+        f2.write(line.replace(str1, str2)) #//写入f2，str1替换为str2
+    print("替换完成")
     f.close()
     f2.close()
 
